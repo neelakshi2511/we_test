@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neelakshi Choudhary</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f8f9fa;
+            color: #222;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            display: flex; /* Use flexbox for layout */
+        }
+
+        /* Sidebar styles */
+        #toc {
+            width: 200px; /* Set width for TOC */
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-right: 1px solid #ddd;
+            position: sticky; /* Keep TOC fixed on scroll */
+            top: 0; /* Position at the top of the viewport */
+        }
+
+        #toc h2 {
+            font-size: 1.5em;
+            margin-top: 0;
+            color: #2a4b8d;
+        }
+
+        #toc a {
+            text-decoration: none;
+            color: #0645ad;
+            display: block; /* Make each link a block */
+            padding: 5px 0; /* Space between links */
+        }
+
+        #toc a:hover {
+            text-decoration: underline;
+        }
+
+        /* Style for header */
+        header {
+            text-align: center;
+            padding: 10px 20px;
+            background-color: #f1f1f1;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 10px 0;
+            color: #2a4b8d;
+        }
+
+        header p {
+            font-size: 1.1em;
+        }
+
+        /* Main section styles */
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        section {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            display: none;
+            transition: max-height 0.3s ease-out;
+            overflow: hidden;
+        }
+
+        h2 {
+            border-bottom: 1px solid #ddd;
+            color: #2a4b8d;
+            font-size: 1.5em;
+            margin-top: 0;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        h3 {
+            font-size: 1.2em;
+            margin: 10px 0 5px;
+            color: #555;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="toc">
+        <h2>Table of Contents</h2>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#accomplishments">Accomplishments</a>
+        <a href="#funFact">Fun Fact</a>
+        <a href="#personalLife">Personal Life</a>
+    </div>
+
+    <main>
+        <header>
+            <h1>Neelakshi Choudhary</h1>
+            <p>A third-year student at VIT Bhopal University, hailing from Dewas, Madhya Pradesh.</p>
+        </header>
+
+        <!-- Education Section -->
+        <h2 onclick="toggleSection('education')">Education</h2>
+        <section id="education">
+            <h3>VIT Bhopal University, Sehore</h3>
+            <p>Bachelor of Technology - Computer Science with Specialization in AI ML (2022-2026)</p>
+            <p>CGPA: 8.58 (till 4th semester)</p>
+            
+            <h3>Vindhyachal Academy, Dewas</h3>
+            <p>Intermediate (82.2%), Matriculation (88.8%) (2019-2022)</p>
+        </section>
+
+        <!-- Skills Section -->
+        <h2 onclick="toggleSection('skills')">Skills</h2>
+        <section id="skills">
+            <h3>Languages & Tools</h3>
+            <p>Python, C++, Java, HTML, CSS, JavaScript, GIT, MySQL, MATLAB, LaTeX</p>
+
+            <h3>Soft Skills</h3>
+            <p>Sportsmanship, Creative Writing, Communication, Leadership, Time management</p>
+        </section>
+
+        <!-- Projects Section -->
+        <h2 onclick="toggleSection('projects')">Projects</h2>
+        <section id="projects">
+            <h3>Image Classifier</h3>
+            <p>Developed an image classifier using Python to identify various species of flowers.</p>
+            
+            <h3>Vaccine Management System</h3>
+            <p>A console-based management system for medical centers to manage data effectively. Tech Stack: Python, MySQL.</p>
+        </section>
+
+        <!-- Accomplishments Section -->
+        <h2 onclick="toggleSection('accomplishments')">Accomplishments & Community Involvement</h2>
+        <section id="accomplishments">
+            <ul>
+                <li>Selected for TalentSprint WE program supported by Google (among 220 out of 22,000 applicants).</li>
+                <li>AWS AI & ML Scholar - Received a 100% scholarship for AI Programming with Python Nanodegree by Udacity.</li>
+                <li>Winner at SGFI M.P. State Table Tennis Tournament 2018, State Captain at 63rd SGFI National Games.</li>
+                <li>Women TechMakers Lead at Google Developer Students Club for 2023-24 tenure.</li>
+            </ul>
+        </section>
+
+        <!-- Fun Fact Section -->
+        <h2 onclick="toggleSection('funFact')">Fun Fact</h2>
+        <section id="funFact">
+            <p>I am also a decently good table tennis player.</p>
+        </section>
+
+    <script>
+        // Function to toggle the display of sections
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section.style.display === "block") {
+                section.style.display = "none"; // Hide the section
+            } else {
+                section.style.display = "block"; // Show the section
+            }
+        }
+    </script>
+
+</body>
+
+</html>
