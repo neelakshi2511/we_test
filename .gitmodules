@@ -1,0 +1,3 @@
+[submodule "Wordle_with_Django"]
+	path = Wordle_with_Django
+	url = https://github.com/neelakshi2511/Wordle_with_Django.git
